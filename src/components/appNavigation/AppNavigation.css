@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 378px;
+  width: 100%;
   height: 80px;
   padding: var(--Radius-sm, 8px) 16px;
   align-items: center;
@@ -22,6 +22,18 @@ body {
   background: var(--Background-dark, #444);
   position: absolute;
   bottom: 0;
+}
+
+.sub-button{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 378px;
+  height: 80px;
+  margin: var(--Radius-sm, 8px) 16px;
+  align-items: center;
+  gap: 10px;
+ 
 }
 
 .menuBotIconName {

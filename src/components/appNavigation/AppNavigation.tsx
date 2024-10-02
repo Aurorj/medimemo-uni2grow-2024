@@ -19,7 +19,8 @@ export function AppNavigation() {
   }, [location.pathname]);
 
   return (
-      <div className="menuBot">
+    <div className="menuBot">
+      <div className="sub-button">
         {dataItem.map((item: ItemNavigation) => (
           <div
             key={item.path}
@@ -50,5 +51,6 @@ export function AppNavigation() {
           </div>
         ))}
       </div>
+    </div>
   );
 }

@@ -92,7 +92,7 @@ function Login() {
 
   return (
     <>
-      <div className="container">
+      <div className="all-container">
         <div className="img">
           <img alt="title" src={oh} />
         </div>

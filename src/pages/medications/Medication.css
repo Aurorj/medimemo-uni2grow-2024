@@ -19,11 +19,13 @@
     margin-bottom: 20px;
 }
 
-.panel {
+.first-panel {
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    /* padding: 20px;  */
+    margin: 20px;
+    margin-right: 50px;
     gap: 20px;
 }
 
@@ -32,6 +34,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    overflow-y:scroll;
+    max-height: 300px;
 }
 
 .empty-doses {
@@ -41,7 +45,6 @@
     align-items: center;
     margin: 20px;
     padding: 20px;
-
     border: 2px dashed #555;
 }
 

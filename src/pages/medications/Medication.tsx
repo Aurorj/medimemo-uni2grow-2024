@@ -91,7 +91,7 @@ function Medication() {
           <Typography variant="subtitle1">Your Medicines Reminders for today!</Typography>
         </div>
       </div>
-      <div className="panel">
+      <div className="first-panel">
         <Typography variant="h6">{printDate()}</Typography>
 
         <div className="all-list">
@@ -109,6 +109,7 @@ function Medication() {
                 width: "100%",
                 maxWidth: 360,
                 display: "flex",
+                marginBottom:"20px",
                 flexDirection: "column",
                 gap: "15px",
               }}

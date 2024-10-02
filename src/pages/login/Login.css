@@ -1,13 +1,13 @@
 body {
   background-color: #F8F4F4;
   margin: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex;  /* Active Flexbox sur le body */
+  align-items: center;  /* Centre verticalement le conteneur */
+  justify-content: center;  /* Centre horizontalement le conteneur */
 }
 
-.container {
-  padding: 10px;
+.all-container {
+  /* padding: 10px; */
   background-color: #F8F4F4;
 }
 
@@ -24,7 +24,6 @@ body {
   align-items: center;
   justify-content: center;
   margin: 10px;
-  width: 100%;
 }
 
 .divTitle {
