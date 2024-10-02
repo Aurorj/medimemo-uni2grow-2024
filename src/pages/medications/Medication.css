@@ -1,0 +1,87 @@
+.background {
+    padding-top: 20px;
+    background-color: #F8F4F4;
+}
+
+.head-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel {
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.all-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.empty-doses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+
+    border: 2px dashed #555;
+}
+
+/* .head-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.background{
+    padding-top: 20px;
+    background-color: #F8F4F4;
+}
+.panel{
+    background-color: #FFFFFF;
+    padding: 20px;
+    gap:20px;
+}
+
+
+.all-list{
+   display: flex;
+   flex-direction: column;
+    gap: 20px;
+}
+.first-list{
+    background-color:#F4F4F4 ;
+}
+
+.second-list{
+    background-color:#F4F4F4 ;
+}
+.tirth-list{
+    background-color:#F4F4F4 ;
+}
+.fouth-list{
+    background-color:#F4F4F4 ;
+}
+.fith-list{
+    background-color:#F4F4F4 ;
+} */
+
