@@ -4,14 +4,14 @@ import { Typography, TextField, Button } from "@mui/material";
 import InputAdornment from "@mui/material/InputAdornment";
 import avatar from "../../assets/images/profile/avatar.svg";
 import allergies from "../../assets/images/profile/allergies.png";
-import arrow_left_alt from "../assets/arrow_left_alt.png";
+import arrow_left_alt from "../../assets/images/profile/arrow_left_alt.png";
 import call from "../../assets/images/profile/call.png";
 import edit from "../../assets/images/profile/edit.png";
-import Group from "../assets/Group.png";
+// import Group from "../assets/Group.png";
 import home from "../../assets/images/profile/home.png";
 import mail from "../../assets/images/profile/mail.png";
-import photo_camera from "../assets/photo_camera.png";
-import save from "../assets/save.png";
+// import photo_camera from "../assets/photo_camera.png";
+// import save from "../assets/save.png";
 import universal_currency from "../../assets/images/profile/universal_currency.png";
 
 
@@ -24,8 +24,7 @@ export default function Profile() {
       <div className="logo-container logo">
         <img src={arrow_left_alt} />
         <Typography>My Profil</Typography>
-        {editalummer?  <img src={edit} onClick={()=>{setEditalummer(false)}}/>: <img />}
-       
+        {editalummer?  <img src={edit} onClick={()=>{setEditalummer(false)}}/>: <img />} 
       </div>
       <div className="panel">
         <div className= "head">
