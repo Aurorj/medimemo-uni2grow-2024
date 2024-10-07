@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { FormEvent, ReactElement, useState } from "react";
 import "../profiles/profile.css";
 import { Typography, TextField, Button } from "@mui/material";
+import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import InputAdornment from "@mui/material/InputAdornment";
+import CancelIcon from "@mui/icons-material/Cancel";
 import avatar from "../../assets/images/profile/avatar.svg";
 import allergies from "../../assets/images/profile/allergies.png";
 import arrow_left_alt from "../../assets/images/profile/arrow_left_alt.png";
@@ -13,34 +15,70 @@ import mail from "../../assets/images/profile/mail.png";
 // import photo_camera from "../assets/photo_camera.png";
 // import save from "../assets/save.png";
 import universal_currency from "../../assets/images/profile/universal_currency.png";
-
-
+import { SaveOutlined } from "@mui/icons-material";
+import { red } from "@mui/material/colors";
 
 export default function Profile() {
-  const [editalummer, setEditalummer] =useState(true)
+  const [editalummer, setEditalummer] = useState(true);
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (editalummer) {
+      return "LOGOUT";
+    } else {
+      return "SAVE";
+    }
+  }
 
   return (
     <div className="background1">
       <div className="logo-container logo">
         <img src={arrow_left_alt} />
         <Typography>My Profil</Typography>
-        {editalummer?  <img src={edit} onClick={()=>{setEditalummer(false)}}/>: <img />} 
+        {editalummer ? (
+          <img
+            src={edit}
+            onClick={() => {
+              setEditalummer(false);
+            }}
+          />
+        ) : (
+          <img />
+        )}
       </div>
       <div className="panel">
-        <div className= "head">
-          <img src={avatar} width={100} height={100}/>
-          <Typography>Francesca Greco</Typography>
+        <div className="head">
+          <div className="contonainer-photo">
+            <img src={avatar} width={150} height={150} />
+            <div className="photo-camera">
+              {" "}
+              <PhotoCameraIcon />
+            </div>
+          </div>
+          <Typography variant="h5">Francesca Greco</Typography>
         </div>
-        <form>
+        <form className="formulaire" onSubmit={handleSubmit}>
           <TextField
-          disabled={editalummer}
-          value="GRCFNCXXXXXXXXXX "
+            disabled={editalummer}
+            value="GRCFNCXXXXXXXXXX "
             fullWidth
             margin="normal"
             slotProps={{
               input: {
                 startAdornment: (
                   <InputAdornment position="start">
+                    <CancelIcon className="cancil">
+                    disabled={editalummer}
+                      {" "}
+                      {editalummer ? (
+                        "LOGOUT"
+                      ) : (
+                        <>
+                          <SaveOutlined />
+                          {"cancil"}
+                        </>
+                      )}
+                    </CancelIcon>
                     <img src={universal_currency} />
                   </InputAdornment>
                 ),
@@ -49,8 +87,8 @@ export default function Profile() {
           />
 
           <TextField
-          disabled={editalummer}
-          value="No allergies"
+            disabled={editalummer}
+            value="No allergies"
             fullWidth
             margin="normal"
             slotProps={{
@@ -65,8 +103,8 @@ export default function Profile() {
             }}
           />
           <TextField
-          disabled={editalummer}
-          value=" (555) 123-4567"
+            disabled={editalummer}
+            value=" (555) 123-4567"
             fullWidth
             margin="normal"
             slotProps={{
@@ -81,8 +119,8 @@ export default function Profile() {
             }}
           />
           <TextField
-          disabled={editalummer}
-          value="francesca.greco@example.com "
+            disabled={editalummer}
+            value="francesca.greco@example.com "
             fullWidth
             margin="normal"
             slotProps={{
@@ -97,8 +135,8 @@ export default function Profile() {
             }}
           />
           <TextField
-          disabled={editalummer}
-          value="123 Vision Lane, Suite 200, Cityville, ST 12345 "
+            disabled={editalummer}
+            value="123 Vision Lane, Suite 200, Cityville, ST 12345 "
             fullWidth
             margin="normal"
             slotProps={{
@@ -112,10 +150,23 @@ export default function Profile() {
               },
             }}
           />
-          <Button variant="contained" fullWidth style={{backgroundColor: "red"}}>
-            LOGOUT
-          </Button>
         </form>
+        <Button
+          className="bouton"
+          type="submit"
+          variant="contained"
+          fullWidth
+          style={{ backgroundColor: "red" }}
+        >
+          {editalummer ? (
+            "LOGOUT"
+          ) : (
+            <>
+              <SaveOutlined />
+              {"SAVE"}
+            </>
+          )}
+        </Button>
       </div>
     </div>
   );
