@@ -1,6 +1,7 @@
 import React, { FormEvent, ReactElement, useState } from "react";
 import "../profiles/profile.css";
 import { Typography, TextField, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import PhotoCameraIcon from "@mui/icons-material/PhotoCamera";
 import InputAdornment from "@mui/material/InputAdornment";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -18,8 +19,38 @@ import universal_currency from "../../assets/images/profile/universal_currency.p
 import { SaveOutlined } from "@mui/icons-material";
 import { red } from "@mui/material/colors";
 
+
+interface User {
+ medicalID: string;  // Propriété de type string
+ allergies: string;     // Propriété de type string
+  callNumber: string;       // Propriété de type number
+  Email: string;  // Propriété de type boolean
+  Adresse:string;
+}
+
+const newUser: User = {
+  medicalID: "GRCFNCXXXXXXXXXX",
+  allergies: "No allergies",
+  callNumber: "(555) 123-4567",
+  Email: "falfrancesca.greco@example.comse",           
+  Adresse:"123 Vision Lane, Suite 200, Cityville, ST 12345"
+};
+
+
 export default function Profile() {
+  const navigate = useNavigate();
   const [editalummer, setEditalummer] = useState(true);
+  const [formData, setFormData] = useState(newUser);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const fieldName = e.target.name;
+    const value = e.target.value;
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [fieldName]: value,
+    }));
+  };
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -33,7 +64,12 @@ export default function Profile() {
   return (
     <div className="background1">
       <div className="logo-container logo">
-        <img src={arrow_left_alt} />
+        <img 
+           onClick={() => {
+            navigate("/medications");
+            }}
+        src={arrow_left_alt} />
+        
         <Typography>My Profil</Typography>
         {editalummer ? (
           <img
@@ -46,7 +82,7 @@ export default function Profile() {
           <img />
         )}
       </div>
-      <div className="panel">
+      <div className="profile-panel">
         <div className="head">
           <div className="contonainer-photo">
             <img src={avatar} width={150} height={150} />
@@ -59,26 +95,21 @@ export default function Profile() {
         </div>
         <form className="formulaire" onSubmit={handleSubmit}>
           <TextField
+          label={!editalummer? "medicalID":null}
+          name="medicalID"
+          onChange={handleChange}
+          color="error"
             disabled={editalummer}
-            value="GRCFNCXXXXXXXXXX "
+            value={formData.medicalID}
             fullWidth
             margin="normal"
             slotProps={{
               input: {
                 startAdornment: (
                   <InputAdornment position="start">
-                    <CancelIcon className="cancil">
-                    disabled={editalummer}
-                      {" "}
-                      {editalummer ? (
-                        "LOGOUT"
-                      ) : (
-                        <>
-                          <SaveOutlined />
-                          {"cancil"}
-                        </>
-                      )}
-                    </CancelIcon>
+                    {" "}
+                   {!editalummer && <CancelIcon className="cancil" /> }
+                   {/* onClick={() => {cancil(true);}} */}
                     <img src={universal_currency} />
                   </InputAdornment>
                 ),
@@ -87,8 +118,11 @@ export default function Profile() {
           />
 
           <TextField
+          label={!editalummer? "allergies":null}
+          name="allergies"
+            onChange={handleChange}
             disabled={editalummer}
-            value="No allergies"
+            value={formData.allergies}
             fullWidth
             margin="normal"
             slotProps={{
@@ -96,6 +130,7 @@ export default function Profile() {
                 startAdornment: (
                   <InputAdornment position="start">
                     {" "}
+                    {!editalummer && <CancelIcon className="cancil" />}
                     <img src={allergies} />
                   </InputAdornment>
                 ),
@@ -103,8 +138,11 @@ export default function Profile() {
             }}
           />
           <TextField
+          label={!editalummer? "callNumber":null}
+          name="callNumber"
+            onChange={handleChange}
             disabled={editalummer}
-            value=" (555) 123-4567"
+            value={formData.callNumber}
             fullWidth
             margin="normal"
             slotProps={{
@@ -112,6 +150,7 @@ export default function Profile() {
                 startAdornment: (
                   <InputAdornment position="start">
                     {" "}
+                    {!editalummer && <CancelIcon className="cancil" />}
                     <img src={call} />
                   </InputAdornment>
                 ),
@@ -119,8 +158,11 @@ export default function Profile() {
             }}
           />
           <TextField
+          label={!editalummer? "Email":null}
+          name="Email"
+            onChange={handleChange}
             disabled={editalummer}
-            value="francesca.greco@example.com "
+            value={formData.Email}
             fullWidth
             margin="normal"
             slotProps={{
@@ -128,6 +170,7 @@ export default function Profile() {
                 startAdornment: (
                   <InputAdornment position="start">
                     {" "}
+                    {!editalummer && <CancelIcon className="cancil" />}
                     <img src={mail} />
                   </InputAdornment>
                 ),
@@ -135,8 +178,11 @@ export default function Profile() {
             }}
           />
           <TextField
+          label={!editalummer? "Adresse":null}
+          name="Adresse"
+            onChange={handleChange}
             disabled={editalummer}
-            value="123 Vision Lane, Suite 200, Cityville, ST 12345 "
+            value={formData.Adresse}
             fullWidth
             margin="normal"
             slotProps={{
@@ -144,6 +190,7 @@ export default function Profile() {
                 startAdornment: (
                   <InputAdornment position="start">
                     {" "}
+                    {!editalummer && <CancelIcon className="cancil" />}
                     <img src={home} />
                   </InputAdornment>
                 ),

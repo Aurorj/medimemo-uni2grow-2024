@@ -1,100 +1,98 @@
 #root {
-    max-width: 1280px;
-    height: 100%;
-  }
-  
-  .panel {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 90px;
-    margin-top: 40px;
-    overflow: auto;
-    width: 500px;
-    text-align: center;
-    border: 1px solid black;
+  max-width: 1280px;
+  height: 100%;
+}
 
-  }
-  .background {
-    background-color: #f8f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-  }
-  .background1 {
-    background-color: #f8f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    margin-bottom: 900px;
-    flex: 1;
-    height: 100%;
-  }
-  
-  .logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7px;
-  }
-  
-  .logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 500px;
-  }
-  
-  .Group {
-    width: 79px;
-    height: 45px;
-  }
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .headProfil {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .head {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .formulaire{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  .photo-camera{
-    position: absolute;
-    color: #FFFFFF;
-    background-color: red;
-    bottom: 5px;
-    right: 5px;
-    border-radius: 50%;
-   
-  }
-  .contonainer-photo{
-    position: relative;
-  }
-  .cancil{
-    position: absolute;
-    right: 10px;
-    background-color: red;
-    color: #FFFFFF;
+.profile-panel {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 90px;
+  margin-top: 40px;
+  overflow: auto;
+  width: 500px;
+  text-align: center;
+}
+.background {
+  background-color: #f8f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.background1 {
+  background-color: #f8f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: 900px;
+  flex: 1;
+  height: 100%;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.Group {
+  width: 79px;
+  height: 45px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.headProfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.photo-camera {
+  position: absolute;
+  color: #ffffff;
+  background-color: red;
+  bottom: 5px;
+  right: 5px;
   border-radius: 50%;
-  }
-  .bouton{
-    display: flex;
-    flex-direction: column;
-    padding: 70 40px;
-  }
+}
+.contonainer-photo {
+  position: relative;
+  margin-bottom: 20px;
+}
+.cancil {
+  position: absolute;
+  right: 10px;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 50%;
+}
+.bouton {
+  display: flex;
+  flex-direction: column;
+  padding: 70 40px;
+}
