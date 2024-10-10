@@ -5,14 +5,18 @@
 
 .profile-panel {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 90px;
-  margin-top: 40px;
-  overflow: auto;
-  width: 500px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* padding: 50px; */
+    margin-top: 40px;
+    overflow: auto;
+    height: 100%;
+    text-align: center;
+    /* flex: 1; */
+    /* margin-right: 20px; */
+    width: 100%;
+    padding: 10px 20px
 }
 .background {
   background-color: #f8f4f4;
@@ -29,23 +33,21 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  margin-bottom: 900px;
   flex: 1;
-  height: 100%;
 }
 
 .logo-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
 }
 
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 500px;
 }
 
 .Group {
@@ -70,7 +72,7 @@
 .formulaire {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 .photo-camera {
   position: absolute;

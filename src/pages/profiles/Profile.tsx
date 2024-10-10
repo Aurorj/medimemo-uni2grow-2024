@@ -88,7 +88,7 @@ export default function Profile() {
       <div className="logo-container logo">
         <img
           onClick={() => {
-            navigate("/medications");
+            navigate(-1);
           }}
           src={arrow_left_alt}
         />
@@ -312,8 +312,6 @@ export default function Profile() {
               </>
             )}
           </Button>
-          <div className="dialog-header">
-            {" "}
             <Dialog
               open={open}
               onClose={handleClose}
@@ -361,7 +359,6 @@ export default function Profile() {
                 </Button>
               </DialogActions>
             </Dialog>
-          </div>
         </React.Fragment>
       </div>
     </div>
