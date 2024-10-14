@@ -16,6 +16,7 @@ import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 
 import { Avatar, Button, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 interface Drug {
   Dosage: string;
@@ -28,15 +29,19 @@ interface Drug {
 }
 
 function specification() {
-  const [open, setOpen] = useState<{[key: string]: boolean}>({});
+  const [open, setOpen] = useState<{ [key: string]: boolean }>({});
+  const navigate = useNavigate();
+  const handlePrev = () => {
+    navigate(-1);
+  };
 
   //   const handleClick = () => {
   //     setOpen(!open);
   //   };
   const handleClick = (key: string) => {
     setOpen((prev) => ({
-        ...prev,
-        [key]: !open[key]
+      ...prev,
+      [key]: !open[key],
     }));
   };
   //   const handleToggle = async (specification: IDose) => {
@@ -84,7 +89,12 @@ function specification() {
   };
   return (
     <div className="Drop-container">
-      <Header title="DROP sept" showBackButton={true} />
+      <Header
+        title="DROP sept"
+        showBackButton={true}
+        onBackButtonClick={handlePrev}
+      />
+
       <div className="panel-specification">
         <div className="head-panel">
           <div className="save">
@@ -118,7 +128,6 @@ function specification() {
               </nav>*/}
             </Box>
           </div>
-
           <Typography>
             Ophthalmic solution with anti-inflammatory activity suitable for
             cases of eye burning and conjunctivitis.
@@ -126,7 +135,12 @@ function specification() {
         </div>
         <div className="list-container2">
           <List
-            sx={{ width: "100%", display: "flex", flexDirection: "column", gap:"20px" }}
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+            }}
             component="nav"
             aria-labelledby="nested-list-subheader"
           >
