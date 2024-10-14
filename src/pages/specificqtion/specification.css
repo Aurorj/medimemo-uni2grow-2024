@@ -8,13 +8,14 @@
     flex: 1;
     height: 100%;
 }
-/* .head{
+header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 7px;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 10px 0;
     width: 100%;
-} */
+}
+
 .logo1{
     display: flex;
     flex-direction: row;
@@ -52,23 +53,4 @@ gap: 20px;
 }
 .drug {
     background-color: #f4f4f4;
-}
-.liste2{
-    background-color:#F4F4F4 ;
-  
-}
-.liste3{
-    background-color:#F4F4F4 ;
-}
-.liste4{
-    background-color:#F4F4F4 ;
-}
-.liste5{
-    background-color:#F4F4F4 ;
-}
-.liste6{
-    background-color:#F4F4F4 ;
-}
-.liste7{
-    background-color:#F4F4F4 ;
 }

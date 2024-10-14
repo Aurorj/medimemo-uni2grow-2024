@@ -18,13 +18,13 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import { Avatar, Button, Typography } from "@mui/material";
 
 interface Drug {
-  dosage: string;
-  methodOfAdministraion: string;
-  contraindications: string;
-  warning: string;
-  sideEffects: string;
-  interactions: string;
-  storage: string;
+  Dosage: string;
+  MethodOfAdministraion: string;
+  Contraindications: string;
+  Warnings: string;
+  SideEffects: string;
+  Interactions: string;
+  Storage: string;
 }
 
 function specification() {
@@ -71,16 +71,16 @@ function specification() {
   //     }
   //   };
   const data: Drug = {
-    dosage: "30 mg/tablet, 1 tablet daily",
-    methodOfAdministraion: `- For ophtalmic use only
+    Dosage: "30 mg/tablet, 1 tablet daily",
+    MethodOfAdministraion: `- For ophtalmic use only
      - Shake the bottle well defore use
      - Tilt head back, pull down the lowed eyelid, and apply drops
      - Avoid touching the dropper tip to any surface, including the eye`,
-    contraindications: "none",
-    warning: "none",
-    sideEffects: "none",
-    interactions: "none",
-    storage: "room temperature",
+    Contraindications: "none",
+    Warnings: "none",
+    SideEffects: "none",
+    Interactions: "none",
+    Storage: "room temperature",
   };
   return (
     <div className="Drop-container">
