@@ -11,7 +11,7 @@ import DoctorDetails from "./pages/doctorDetails/DoctorDetails.tsx";
 import Program from "./pages/program/Program.tsx";
 import { Therapies } from "./pages/therapies/Therapies.tsx";
 import TherapyDetails from "./pages/therapyDetails/TherapyDetails.tsx"
-import  Profile from "./pages/profiles/Profile.tsx";
+import  Profile from "./pages/profile/Profile.tsx";
 
 const router = createBrowserRouter([
   {
