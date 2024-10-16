@@ -36,7 +36,6 @@ import {
 } from "@mui/icons-material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
 interface User {
   name: string;
   lastName: string;
